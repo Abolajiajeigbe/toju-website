@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toju Health — One health timeline for the family you're caring for from afar</title>
+<meta name="description" content="Toju Health turns scattered WhatsApp photos, voice notes, and paper records into one shared, secure health timeline — so African diaspora families can coordinate a parent's care from anywhere.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23163A47%22/><path d=%22M30 38h40M50 38v34M38 72h24%22 stroke=%22%23E8C468%22 stroke-width=%228%22 stroke-linecap=%22round%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a href="#top" class="nav__logo">
+      <span class="nav__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="30" height="30"><rect width="40" height="40" rx="9" fill="#163A47"/><path d="M12 15.5H28M20 15.5V29M15 29H25" stroke="#E8C468" stroke-width="3.2" stroke-linecap="round"/></svg>
+      </span>
+      Toju <span class="nav__logo-sub">Health</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#how-it-works">How it works</a>
+      <a href="#features">What's inside</a>
+      <a href="#trust">Security &amp; trust</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav__cta">
+      <a href="#waitlist" class="btn btn--ghost">Join the beta</a>
+      <a href="https://app.toju.health" class="btn btn--primary">Go to app <span aria-hidden="true">→</span></a>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__pattern" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow">For families caring for someone from another continent</p>
+        <h1>Your mother's health story, <em>finally in one place</em>.</h1>
+        <p class="hero__lede">
+          The lab result on WhatsApp. The prescription photo in a group chat. The voice note from your sister at 2am.
+          Toju turns all of it into one shared, secure health timeline — so your whole family can see what's really going on, no matter which continent they're on.
+        </p>
+        <div class="hero__actions">
+          <a href="#waitlist" class="btn btn--primary btn--lg">Join the beta</a>
+          <a href="#how-it-works" class="btn btn--text">See how it works <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="hero__note">Coordination, not diagnosis. Toju organizes information — your family's doctors still make the calls.</p>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="chaos" id="chaosGroup">
+          <div class="chaos__bubble b1">🩺 Blood sugar: 142</div>
+          <div class="chaos__bubble b2">📷 IMG_4021.jpg</div>
+          <div class="chaos__bubble b3">🎙️ Voice note · 0:47</div>
+          <div class="chaos__bubble b4">📄 Prescription — Amoxicillin</div>
+          <div class="chaos__bubble b5">🩸 BP: 150/95</div>
+        </div>
+        <svg class="arrow" viewBox="0 0 60 24" width="60" height="24"><path d="M2 12h50M42 4l10 8-10 8" stroke="#C98A2B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="timeline" id="timelineGroup">
+          <div class="timeline__line"></div>
+          <div class="timeline__node" style="--i:0"><span class="timeline__dot"></span><div class="timeline__card"><b>Feb 12</b> — Blood glucose, elevated</div></div>
+          <div class="timeline__node" style="--i:1"><span class="timeline__dot"></span><div class="timeline__card"><b>Feb 14</b> — Prescription, Amoxicillin</div></div>
+          <div class="timeline__node" style="--i:2"><span class="timeline__dot"></span><div class="timeline__card"><b>Feb 20</b> — BP check, 150/95</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="problem">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--center">The reality right now</p>
+      <h2 class="section-title section-title--center">You're already doing the coordinating.<br>You just don't have the tools for it.</h2>
+      <p class="section-lede section-lede--center">
+        If you're an adult child abroad, you already know this pattern: a symptom comes up, a photo lands in the family group chat,
+        and suddenly you're piecing together a diagnosis from a blurry image and a panicked voice note — while doctors thousands of miles away have no record of what came before.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-card__num">23%</span>
+          <span class="stat-card__label">of the global disease burden carried by Africa, funded by just 1% of global health spending</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__num">1:5,000</span>
+          <span class="stat-card__label">doctor-to-patient ratio in Nigeria — over 8× worse than WHO's recommended standard</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__num">71%</span>
+          <span class="stat-card__label">of diaspora adults surveyed said they aren't confident they could access their parent's full health history today</span>
+        </div>
+      </div>
+
+      <div class="problem__quote">
+        <p>“She doesn't like going to the doctor because they would just add to your problems.”</p>
+        <span>— from an early family interview</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="how" id="how-it-works">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--center">How Toju works</p>
+      <h2 class="section-title section-title--center">From scattered to structured, in four steps</h2>
+
+      <div class="how__grid">
+        <div class="how__step">
+          <span class="how__num">1</span>
+          <h3>Upload what you already have</h3>
+          <p>Photos of prescriptions, lab results, doctor's notes, even the WhatsApp voice note your sister sent — Toju accepts it as-is. No re-typing, no reformatting.</p>
+        </div>
+        <div class="how__step">
+          <span class="how__num">2</span>
+          <h3>AI reads and extracts the details</h3>
+          <p>Toju identifies the medication, the date, the provider, the result — and structures it, so nobody has to squint at a blurry photo to find what matters.</p>
+        </div>
+        <div class="how__step">
+          <span class="how__num">3</span>
+          <h3>You confirm what it found</h3>
+          <p>Every extraction is shown to a family member for a quick confirm-or-correct — Toju never adds anything to the record without a human checking it first.</p>
+        </div>
+        <div class="how__step">
+          <span class="how__num">4</span>
+          <h3>The whole family sees one timeline</h3>
+          <p>Every rep with access — you, your siblings, whoever's involved — sees the same chronological history. Searchable. Shareable with a doctor in one link.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="features" id="features">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--center">What's inside</p>
+      <h2 class="section-title section-title--center">Built around how families actually coordinate care</h2>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="feature__icon" aria-hidden="true">👪</div>
+          <h3>Multi-rep family access</h3>
+          <p>Invite your siblings. Everyone sees the same profile for your parent, no re-explaining what happened last time.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon" aria-hidden="true">🗂️</div>
+          <h3>One document vault</h3>
+          <p>Every prescription, result, and report lives in one place — not scattered across five different chat threads.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon" aria-hidden="true">⏱️</div>
+          <h3>A real timeline</h3>
+          <p>Chronological, searchable history. Find the result from two years ago in seconds, not by scrolling forever.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon" aria-hidden="true">📤</div>
+          <h3>Share with a doctor</h3>
+          <p>Export a clean PDF summary before an appointment, so the next doctor isn't starting from zero either.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon" aria-hidden="true">🌍</div>
+          <h3>Built for the diaspora</h3>
+          <p>Designed for families managing care across borders and time zones — not a hospital system retrofitted for patients.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon" aria-hidden="true">🔒</div>
+          <h3>Private by default</h3>
+          <p>Only people your family invites can see anything. Nothing is public. Nothing is sold.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST ============ -->
+  <section class="trust" id="trust">
+    <div class="wrap trust__inner">
+      <div class="trust__copy">
+        <p class="eyebrow">Security &amp; trust</p>
+        <h2 class="section-title">This is your family's health information. We treat it that way.</h2>
+        <p class="section-lede">
+          In our early conversations with diaspora families, the same concerns came up every time: who can see this, is it encrypted, and will it be used to train some AI model somewhere.
+          Here's where we stand on each.
+        </p>
+        <ul class="trust__list">
+          <li><b>Coordination, not diagnosis.</b> Toju organizes and structures information. It never interprets, suggests, or replaces a doctor's judgment.</li>
+          <li><b>Access is permission-based.</b> A profile is only visible to the family members explicitly invited to it — nobody else, ever.</li>
+          <li><b>Built toward PIPEDA and HIPAA-aligned standards.</b> Our data architecture is being built around Canadian and U.S. health-privacy frameworks from day one, not bolted on after.</li>
+          <li><b>No ads. No data sold.</b> Toju is funded by subscriptions, not by monetizing your family's health data.</li>
+        </ul>
+      </div>
+      <div class="trust__pattern" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ============ VALIDATION / INVESTOR STRIP ============ -->
+  <section class="validation">
+    <div class="wrap">
+      <p class="validation__label">Grounded in real research, not a hunch</p>
+      <div class="validation__row">
+        <div class="validation__item"><span>3</span>in-depth family interviews</div>
+        <div class="validation__item"><span>25</span>diaspora survey responses</div>
+        <div class="validation__item"><span>5</span>competitor platforms mapped</div>
+        <div class="validation__item"><span>0</span>existing platforms built for this exact problem</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--center">Pricing</p>
+      <h2 class="section-title section-title--center">Free during beta. Simple pricing after.</h2>
+      <p class="section-lede section-lede--center">
+        We're still learning what's fair from the families using Toju right now — so beta access is free, and pricing will be shaped by that feedback, not guessed at in advance.
+      </p>
+      <div class="pricing__grid">
+        <div class="price-card">
+          <h3>Individual</h3>
+          <p class="price-card__amount">Free in beta</p>
+          <p class="price-card__note">One care recipient profile, unlimited uploads, one family rep</p>
+        </div>
+        <div class="price-card price-card--highlight">
+          <span class="price-card__tag">Most families</span>
+          <h3>Family</h3>
+          <p class="price-card__amount">Free in beta</p>
+          <p class="price-card__note">One care recipient profile, multiple reps invited, shared timeline for everyone</p>
+        </div>
+      </div>
+      <p class="pricing__foot">Have thoughts on what this should cost? <a href="#waitlist">Tell us when you join the beta.</a></p>
+    </div>
+  </section>
+
+  <!-- ============ WAITLIST / CTA ============ -->
+  <section class="waitlist" id="waitlist">
+    <div class="wrap waitlist__inner">
+      <h2>Ready to stop piecing it together from group chats?</h2>
+      <p>Join the beta and be one of the first families to bring your parent's health history into one place.</p>
+      <form class="waitlist__form" id="waitlistForm">
+        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+        <button type="submit" class="btn btn--primary">Join the beta</button>
+      </form>
+      <p class="waitlist__status" id="waitlistStatus" role="status"></p>
+      <p class="waitlist__alt">Already have access? <a href="https://app.toju.health">Go to app.toju.health →</a></p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--center">Questions</p>
+      <h2 class="section-title section-title--center">Before you ask</h2>
+
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>Is Toju a medical diagnosis tool?</summary>
+          <p>No. Toju organizes and structures the information your family already has — documents, results, notes. It never interprets results or suggests treatment. That stays with your doctors.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Who can see my parent's information?</summary>
+          <p>Only the family members explicitly invited to that profile. Nobody else — not other Toju users, not the public, not advertisers.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Will my family's data be used to train an AI model?</summary>
+          <p>No. We use enterprise AI services that don't train their models on customer data by default, and we're building our pipeline specifically to keep raw documents out of reach of any model that isn't doing the extraction task you asked for.</p>
+        </details>
+        <details class="faq__item">
+          <summary>What if my parent doesn't use email or isn't tech-savvy?</summary>
+          <p>Toju is built for the family member coordinating from abroad first. Your parent doesn't need to do anything — you and your siblings manage the profile on their behalf.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Which countries does Toju work for?</summary>
+          <p>Toju is built for African diaspora families broadly — wherever you are, and wherever your parent's care is happening.</p>
+        </details>
+        <details class="faq__item">
+          <summary>How do I get access?</summary>
+          <p>Join the beta waitlist above. We're onboarding families in small groups so we can get feedback right as you use it.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <a href="#top" class="nav__logo footer__logo">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="26" height="26"><rect width="40" height="40" rx="9" fill="#E8C468"/><path d="M12 15.5H28M20 15.5V29M15 29H25" stroke="#163A47" stroke-width="3.2" stroke-linecap="round"/></svg>
+        </span>
+        Toju <span class="nav__logo-sub">Health</span>
+      </a>
+      <p class="footer__tagline">“Toju” — Yoruba/Edo for <em>to care for</em>.<br>Coordination, not diagnosis.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Product</h4>
+      <a href="#how-it-works">How it works</a>
+      <a href="#features">What's inside</a>
+      <a href="#trust">Security &amp; trust</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:abolaji@toju.health">Contact</a>
+      <a href="https://app.toju.health">Go to app</a>
+    </div>
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms of use</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© <span id="year"></span> Toju Health. All rights reserved.</span>
+    <span>Toronto, Canada</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
