@@ -166,18 +166,12 @@ p{ margin:0; }
 .feature p{ font-size: 14.5px; color: var(--slate); line-height:1.6; }
 
 /* ---------- trust ---------- */
-.trust{ padding: 96px 0; background: var(--paper-2); position:relative; overflow:hidden; }
-.trust__inner{ display:grid; grid-template-columns: 1fr 0.55fr; gap: 50px; align-items:center; }
+.trust{ padding: 96px 0; background: var(--paper-2); }
+.trust__inner{ max-width: 680px; margin: 0 auto; }
 .trust__list{ margin-top: 26px; display:flex; flex-direction:column; gap: 16px; }
 .trust__list li{ font-size: 15px; line-height:1.6; color: var(--slate); padding-left: 22px; position:relative; }
 .trust__list li:before{ content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background: var(--ink); }
 .trust__list b{ color: var(--ink); }
-.trust__pattern{
-  height: 320px; border-radius: var(--radius);
-  background-image: radial-gradient(var(--gold-soft) 2.5px, transparent 2.8px);
-  background-size: 32px 32px;
-  background-color: var(--white);
-}
 
 /* ---------- validation strip ---------- */
 .validation{ padding: 56px 0; border-bottom: 1px solid var(--line); }
@@ -241,8 +235,6 @@ p{ margin:0; }
   .nav__burger{ display:flex; }
   .nav__cta .btn--ghost{ display:none; }
   .hero__inner{ grid-template-columns: 1fr; }
-  .trust__inner{ grid-template-columns: 1fr; }
-  .trust__pattern{ height: 160px; order:-1; }
   .stat-grid, .feature-grid{ grid-template-columns: 1fr 1fr; }
   .how__grid{ grid-template-columns: 1fr 1fr; }
   .footer__inner{ grid-template-columns: 1fr 1fr; }
