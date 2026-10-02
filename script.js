@@ -15,8 +15,8 @@ burger?.addEventListener('click', () => {
 // `waitlist` table (insert-only for anon), not by keeping this key secret.
 // TODO: fill these in once confirmed — project URL from Supabase Settings > API,
 // and the "anon" / "public" key from the same page (never the service_role key).
-const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+const SUPABASE_URL = 'https://nbdikagvymbzrssvlwoe.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_CNbUWoJb3aUL31HA7qk0qg_6Kk0fzgn';
 
 const form = document.getElementById('waitlistForm');
 const status = document.getElementById('waitlistStatus');
