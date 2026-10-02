@@ -9,11 +9,15 @@ burger?.addEventListener('click', () => {
   burger.setAttribute('aria-expanded', String(open));
 });
 
-// Waitlist form
-// NOTE: this currently has no backend wired up. It stores nothing.
-// Before launch, connect this to a real endpoint — e.g. a Formspree form,
-// a Google Form, or a simple API route once the app backend supports it —
-// and replace the localStorage line + fake delay below with an actual fetch() call.
+// Waitlist form — wired to Supabase.
+// This uses the public "anon" key, which is safe to ship in client-side code:
+// what it's allowed to do is governed by Row Level Security policies on the
+// `waitlist` table (insert-only for anon), not by keeping this key secret.
+// TODO: fill these in once confirmed — project URL from Supabase Settings > API,
+// and the "anon" / "public" key from the same page (never the service_role key).
+const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+
 const form = document.getElementById('waitlistForm');
 const status = document.getElementById('waitlistStatus');
 
@@ -24,9 +28,29 @@ form?.addEventListener('submit', async (e) => {
 
   status.textContent = 'Adding you to the list…';
 
-  // Placeholder behavior — replace with a real submission endpoint.
-  await new Promise(r => setTimeout(r, 500));
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ email })
+    });
 
-  status.textContent = `You're on the list. We'll email ${email} when your beta spot opens.`;
-  form.reset();
+    if (res.ok) {
+      status.textContent = `You're on the list. We'll email ${email} when your beta spot opens.`;
+      form.reset();
+    } else if (res.status === 409) {
+      // unique constraint on email — they already signed up
+      status.textContent = `You're already on the list — we'll email ${email} when your beta spot opens.`;
+      form.reset();
+    } else {
+      status.textContent = "Something went wrong — mind trying again in a moment?";
+    }
+  } catch (err) {
+    status.textContent = "Something went wrong — mind trying again in a moment?";
+  }
 });
