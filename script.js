@@ -37,7 +37,13 @@ form?.addEventListener('submit', async (e) => {
         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
         'Prefer': 'return=minimal'
       },
-      body: JSON.stringify({ email })
+      body: JSON.stringify({
+        email,
+        lives_in: form.lives_in.value,
+        cares_for: form.cares_for.value,
+        cares_for_location: form.cares_for_location.value,
+        heard_from: form.heard_from.value
+      })
     });
 
     if (res.ok) {

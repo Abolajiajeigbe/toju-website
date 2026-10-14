@@ -255,8 +255,57 @@
       <h2>Ready to stop piecing it together from group chats?</h2>
       <p>Join the beta and be one of the first families to bring your parent's health history into one place.</p>
       <form class="waitlist__form" id="waitlistForm">
-        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
-        <button type="submit" class="btn btn--primary">Join the beta</button>
+        <div class="waitlist__fields">
+          <label class="waitlist__field">
+            <span>Where do you live?</span>
+            <select name="lives_in" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>Canada</option>
+              <option>United States</option>
+              <option>United Kingdom</option>
+              <option>Nigeria</option>
+              <option>Somewhere else</option>
+            </select>
+          </label>
+          <label class="waitlist__field">
+            <span>Who do you help care for?</span>
+            <select name="cares_for" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>A parent</option>
+              <option>A grandparent</option>
+              <option>Another relative</option>
+              <option>Myself</option>
+              <option>Someone else</option>
+            </select>
+          </label>
+          <label class="waitlist__field">
+            <span>Where do they live?</span>
+            <select name="cares_for_location" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>Nigeria</option>
+              <option>Ghana</option>
+              <option>Kenya</option>
+              <option>Canada</option>
+              <option>Somewhere else</option>
+            </select>
+          </label>
+          <label class="waitlist__field">
+            <span>How did you hear about Toju?</span>
+            <select name="heard_from" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>Instagram</option>
+              <option>LinkedIn</option>
+              <option>A friend or family member</option>
+              <option>Church or community group</option>
+              <option>An event</option>
+              <option>Somewhere else</option>
+            </select>
+          </label>
+        </div>
+        <div class="waitlist__row">
+          <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+          <button type="submit" class="btn btn--primary">Join the beta</button>
+        </div>
       </form>
       <p class="waitlist__consent">By joining, you agree to receive emails from Toju Health (Toronto, Canada) about beta access and launch. We use your email only for that, and you can unsubscribe at any time. <a href="/privacy.html">Privacy Policy</a></p>
       <p class="waitlist__status" id="waitlistStatus" role="status"></p>
